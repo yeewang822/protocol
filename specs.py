@@ -722,6 +722,15 @@ Field_91:91,Field_94:94,Field_97:97,Field_100:100,Field_103:103,Field_106:106,\
 Field_109:109,Field_112:112,Field_115:115,Field_118:118,Field_121:121,\
 Field_124:124,Field_127:127"
 
+#     0                   1                   2                   3
+#     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+#    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+#    |     Flags     |                   Reserved_1                  |
+#    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+#    |            VXLAN Network Identifier           |   Reserved_2  |
+#    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+vxlan="Flags:8,Reserved_1:24,VXLAN Network Identifier:24,Reserved_2:8"
+
 
 # Dictionary of specs
 protocols={"ethernet":ethernet,
@@ -763,6 +772,7 @@ protocols={"ethernet":ethernet,
            "cotp_dt":cotp_dt,
            "cotp_dr":cotp_dr,
            "example":example,
-           "test":test
+           "test":test,
+           "vxlan":vxlan
            }
 
